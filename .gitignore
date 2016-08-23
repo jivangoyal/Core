@@ -48,3 +48,6 @@ Temporary Items
 Demo/bin/*
 Demo/obj/*
 Demo/project.lock.json
+Demo/wwwroot/lib/*
+Demo/wwwroot/sass/app.css
+Demo/wwwroot/sass/app.min.css

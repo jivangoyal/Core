@@ -1,0 +1,57 @@
+﻿.page-wrap {
+  width: 75%;
+  @include breakpoint(large) { width: 60%; }
+  @include breakpoint(medium) { width: 80%; }
+  @include breakpoint(small) { width: 95%; }
+}
+
+div.logo {
+   background: url("logo.png") no-repeat;
+   @include image-2x("logo2x.png", 100px, 25px);
+ }
+
+.article {
+     @include clearfix();
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+.button {
+  @include border-radius(5px);
+}
+
+.submit-button {
+  @include border-top-radius(10px);
+  @include border-right-radius(8px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius (6px);
+}
+
+.article-heading {
+  @include opacity(0.8);
+}
+
+.footer-wrap {
+  width: 450px;
+  @include center-block;
+}
+
+.text-truncate {
+  @include text-truncate;
+}
+
+.abs {
+  @include abs-pos(10px, 10px, 5px, 15px);
+}
+
+body {
+  @include font-size(16);
+}
+
+body {
+  @include line-height (16);
+}

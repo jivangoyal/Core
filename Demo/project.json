@@ -1,7 +1,9 @@
 {
   "name": "Demo",
-  "version": "1.0.0",
+  "version": "0.0.6",
+  "author": "Jivan Goyal",
   "description": "Explore best technologies and techniques at one place",
+  "license": "MIT",
 
   "dependencies": {
     "Microsoft.NETCore.App": {
@@ -51,5 +53,17 @@
       "wwwroot",
       "Views"
     ]
+  },
+
+  "packOptions": {
+    "owners": [ "Jivan Goyal" ],
+    "summary": "Demo using AspNetCore,Mvc,Razor,Kestrel",
+    "requireLicenseAcceptance": true,
+    "licenseUrl": "https://github.com/jivangoyal/Demo-master/blob/master/LICENSE",
+    "tags": [ "AspNetCore", "Mvc", "Razor", "Kestrel", "Sass" ],
+    "repository": {
+      "url": "https://github.com/jivangoyal/Demo-master.git",
+      "type": "git"
+    }
   }
 }

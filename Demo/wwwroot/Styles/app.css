@@ -1,4 +1,10 @@
-﻿.page-wrap {
+﻿body {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+
+.page-wrap {
   width: 75%; }
   @media (min-width: 64.375em) {
     .page-wrap {

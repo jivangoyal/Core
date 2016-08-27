@@ -21,8 +21,9 @@
     "Node.js": "5.3.0"
   },
 
-  "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
   },
 
   "frameworks": {
@@ -45,8 +46,10 @@
     }
   },
 
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0"
+  "publishOptions": {
+    "include": [
+      "wwwroot",
+      "Views"
+    ]
   }
 }

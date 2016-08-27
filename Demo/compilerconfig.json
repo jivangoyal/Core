@@ -4,7 +4,7 @@
     "inputFile": "wwwroot/sass/app.scss"
   },
   {
-    "outputFile": "wwwroot/Styles/bootstrap.css",
+    "outputFile": "wwwroot/lib/bootstrap.css",
     "inputFile": "wwwroot/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
   }
 ]

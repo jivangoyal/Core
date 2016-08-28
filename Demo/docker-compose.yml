@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  demo:
+    image: username/demo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"

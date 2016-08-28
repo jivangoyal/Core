@@ -4,7 +4,25 @@
   "author": "Jivan Goyal",
   "description": "Explore best technologies and techniques at one place",
   "license": "MIT",
-
+  "packOptions": {
+    "owners": [
+      "Jivan Goyal"
+    ],
+    "summary": "Demo using AspNetCore,Mvc,Razor,Kestrel",
+    "requireLicenseAcceptance": true,
+    "licenseUrl": "https://github.com/jivangoyal/Demo-master/blob/master/LICENSE",
+    "tags": [
+      "AspNetCore",
+      "Mvc",
+      "Razor",
+      "Kestrel",
+      "Sass"
+    ],
+    "repository": {
+      "url": "https://github.com/jivangoyal/Demo-master.git",
+      "type": "git"
+    }
+  },
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0",
@@ -22,12 +40,10 @@
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Node.js": "5.3.0"
   },
-
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^2.2.0"
   },
-
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
@@ -36,34 +52,31 @@
       ]
     }
   },
-
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "debugType": "portable"
   },
-
   "runtimeOptions": {
     "configProperties": {
       "System.GC.Server": true
     }
   },
-
+  "AspNetCoreApp": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "launchUrl": "http://localhost:50000",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    }
+  },
   "publishOptions": {
     "include": [
-      "wwwroot",
-      "Views"
+      "docker-compose.yml",
+      "docker-compose.debug.yml",
+      "Dockerfile.debug",
+      "Dockerfile",
+      ".dockerignore"
     ]
-  },
-
-  "packOptions": {
-    "owners": [ "Jivan Goyal" ],
-    "summary": "Demo using AspNetCore,Mvc,Razor,Kestrel",
-    "requireLicenseAcceptance": true,
-    "licenseUrl": "https://github.com/jivangoyal/Demo-master/blob/master/LICENSE",
-    "tags": [ "AspNetCore", "Mvc", "Razor", "Kestrel", "Sass" ],
-    "repository": {
-      "url": "https://github.com/jivangoyal/Demo-master.git",
-      "type": "git"
-    }
   }
 }

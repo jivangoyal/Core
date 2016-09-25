@@ -38,9 +38,13 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
-    "Node.js": "5.3.0"
+    "Node.js": "5.3.0",
+    "Microsoft.Extensions.Logging": "1.0.0",
+    "NLog.Extensions.Logging": "1.0.0-*",
+    "FluentValidation": "6.2.1"
   },
   "devDependencies": {
+    "NLog.Extensions.Logging": "1.0.0-*",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.2.0"
   },
@@ -76,10 +80,12 @@
       "docker-compose.debug.yml",
       "Dockerfile.debug",
       "Dockerfile",
-      ".dockerignore"
+      ".dockerignore",
+      "wwwroot",
+      "Views",
+      "nlog.config"
     ]
   },
-
   "tools": {
     "Microsoft.DotNet.Watcher.Tools": "1.0.0-preview2-final"
   }

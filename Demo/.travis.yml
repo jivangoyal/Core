@@ -1,7 +1,10 @@
-﻿language: csharp
-solution: Demo.sln
-matrix:
-  include:
-    - dotnet: 1.0.1
-      mono: none
-      env: DOTNETCORE=1
+﻿{
+  "language": "csharp",
+solution: Demo.sln,
+  "group": "stable",
+  "dist": "precise",
+  "os": "linux",
+  "mono": "none",
+  "dotnet": "1.0.1",
+  "env": "DOTNETCORE=1"
+}

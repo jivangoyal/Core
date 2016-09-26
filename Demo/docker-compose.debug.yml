@@ -2,7 +2,7 @@ version: '2'
 
 services:
   demo:
-    image: username/demo:Debug
+    image: jivangoyal/demo:Debug
     build:
       context: .
       dockerfile: Dockerfile.debug

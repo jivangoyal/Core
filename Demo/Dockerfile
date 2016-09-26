@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:1.0.0
+FROM microsoft/dotnet:1.0.0-core
 
 # Set the Working Directory
 WORKDIR /app

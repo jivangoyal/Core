@@ -49,6 +49,7 @@ Demo/bin/*
 Demo/obj/*
 Demo/project.lock.json
 Demo/wwwroot/lib/*
-Demo/wwwroot/sass/app.css
-Demo/wwwroot/sass/app.min.css
+Demo/wwwroot/Styles/app.css
+Demo/wwwroot/Styles/app.min.css
 Demo/.vs/
+*.css

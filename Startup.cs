@@ -1,20 +1,18 @@
-﻿using System.IO;
-using Demo.Extensions;
+﻿using Demo.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NLog;
 using NLog.Extensions.Logging;
-using NLog.Targets;
-using System.Linq;
+using NLog.Web;
 
 namespace Demo
 {
     public class Startup
     {
         public IConfigurationRoot Configuration { get; }
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -31,6 +29,7 @@ namespace Demo
             }
             Configuration = builder.Build();
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCustomizedMvc();

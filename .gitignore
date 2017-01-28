@@ -52,4 +52,7 @@ Demo/wwwroot/lib/*
 Demo/wwwroot/Styles/app.css
 Demo/wwwroot/Styles/app.min.css
 Demo/.vs/
+.vs/restore.dg
 *.css
+obj/*
+bin/*

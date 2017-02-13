@@ -1,0 +1,5 @@
+﻿1. document appsettings.json
+2. document bundleconfig.json
+3. document launch.json
+4. document launchSettings.json
+5. document nlog.json

@@ -1,10 +1,16 @@
 ﻿[
   {
     "outputFile": "wwwroot/Styles/app.css",
-    "inputFile": "wwwroot/sass/app.scss"
+    "inputFile": "wwwroot/sass/app.scss",
+    "minify": { "enabled": false },
+    "includeInProject": false,
+    "options": { "sourceMap": false }
   },
   {
     "outputFile": "wwwroot/lib/bootstrap.css",
-    "inputFile": "wwwroot/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+    "inputFile": "wwwroot/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
+    "minify": { "enabled": false },
+    "includeInProject": true,
+    "options": { "sourceMap": false }
   }
 ]

@@ -56,3 +56,4 @@ Demo/.vs/
 *.css
 obj/*
 bin/*
+.vs/config/applicationhost.config

@@ -1,0 +1,75 @@
+﻿@model Demo.Views.TestLab.ViewModel.ContactModel
+
+<ul>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Anchor")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Cache")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Environment")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Form")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Input")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Label")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Link")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Option")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Script")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Select")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("TextArea")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("Image")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("ValidationMessage")</a></li>
+    <li><a asp-controller="Home" asp-action="Index">@Html.Raw("ValidationSummary")</a></li>
+</ul>
+<br />
+<br />
+<br />
+<ul>
+    <li>
+        <h4>Environment Tag Helper</h4>
+        <environment names="Development">
+            This is development environment. This is decided by ASPNET_ENV
+        </environment>
+        <environment names="Staging,Production">
+            This is staging or production environment
+        </environment>
+    </li>
+    <li>
+        Formatting Values
+        <input asp-for="TestAmount" asp-format="{0:N4}" />
+    </li>
+    <li>
+        Input tag
+        <div>
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <input asp-for="Address.AddressLine1" />
+        </div>
+    </li>
+    <li>
+        Textarea tag
+        <div>
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <textarea name="Description" id="Description"
+                      rows="5" cols="40"
+                      data-val-required="The Description field is required."
+                      data-val-maxlength-max="5000"
+                      data-val-maxlength="The field Description must be a string or array type with a maximum length of '5000'."
+                      data-val="true"></textarea>
+            <span asp-validation-for="Description"></span>
+        </div>
+    </li>
+    <li>
+        Select Tag Helper
+        <div>
+            <select asp-for="CountryCode"
+                    asp-items="@(new SelectList(ViewBag.Countries,"Value","Text"))">
+                <option value="CA">Canada</option>
+                <option value="US">US</option>
+                <option value="IN">India</option>
+                <option value="--">Other</option>
+            </select>
+        </div>
+        <select asp-for="State" asp-items="@ViewBag.States">
+            <option>Please select one</option>
+        </select>
+        <select asp-for="Code" asp-items="Model.Codes">
+            <option>Please select one</option>
+        </select>
+    </li>
+</ul>

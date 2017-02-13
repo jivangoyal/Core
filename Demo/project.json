@@ -25,13 +25,14 @@
   },
   "dependencies": {
     "Node.js": "5.3.0",
-    "FluentValidation": "6.2.1",
+    "FluentValidation": "6.4.0-rc3",
     "Microsoft.AspNetCore.Diagnostics": "1.1.0",
     "Microsoft.AspNetCore.Mvc": "1.1.1",
     "Microsoft.AspNetCore.Razor": "1.1.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
     "Microsoft.AspNetCore.StaticFiles": "1.1.0",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+    "Microsoft.Extensions.Configuration.Binder": "1.1.0",
     "Microsoft.Extensions.Configuration.Json": "1.1.0",
     "Microsoft.Extensions.Logging": "1.1.0",
     "Microsoft.Extensions.Logging.Console": "1.1.0",
@@ -41,8 +42,13 @@
       "type": "platform",
       "version": "1.1.0"
     },
-    "NLog.Extensions.Logging": "1.0.0-rtm-beta1",
-    "NLog.Web.AspNetCore": "4.3.0"
+    "NLog.Extensions.Logging": "1.0.0-rtm-beta2",
+    "NLog.Web.AspNetCore": "4.3.1",
+    "Microsoft.Composition": "1.0.30",
+    "Microsoft.AspNetCore.Razor.Tools": "1.1.0-preview4-final",
+    "Microsoft.AspNetCore.Mvc.TagHelpers": "1.1.1",
+    "Microsoft.AspNetCore.ResponseCompression": "1.0.0",
+    "Microsoft.AspNetCore.ResponseCaching": "1.1.0"
   },
   "devDependencies": {
     "NLog.Extensions.Logging": "1.0.0",
@@ -53,7 +59,7 @@
     "netcoreapp1.1": {
       "imports": [
         "dotnet5.6",
-        "portable-net45+win8",
+        "portable-net45+win8+wp8+wpa81",
         "dnxcore50"
       ]
     }
@@ -78,11 +84,6 @@
   },
   "publishOptions": {
     "include": [
-      "docker-compose.yml",
-      "docker-compose.debug.yml",
-      "Dockerfile.debug",
-      "Dockerfile",
-      ".dockerignore",
       "wwwroot",
       "Views",
       "nlog.config"
@@ -90,5 +91,8 @@
   },
   "tools": {
     "Microsoft.DotNet.Watcher.Tools": "1.1.0-preview4-final"
+  },
+  "scripts": {
+    "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
   }
 }

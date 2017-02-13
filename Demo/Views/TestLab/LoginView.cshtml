@@ -1,0 +1,5 @@
+﻿@model Demo.Views.TestLab.ViewModel.LoginViewModel
+<!--Create an input for UserName using Html Helper-->
+@Html.EditorFor(l => l.UserName)
+<!--Create an input for UserName using Tag Helper-->
+<input asp-for="UserName" />
